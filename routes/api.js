@@ -144,7 +144,7 @@ loghandler = {
     }
 }
 
-const listkey = ["FarZ", "Api"];
+const listkey = ["penTagram", "FarZ", "Api"];
 //router.use(favicon(__path + "/views/logo.ico"));
 
 var len = 15
