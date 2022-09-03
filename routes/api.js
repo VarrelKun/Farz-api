@@ -608,15 +608,12 @@ router.get('/nsfw/ass', async (req, res, next) => {
 	if(!apikeyInput) return res.json(loghandler.notparam)
 	if (apikeyInput != 'penTagram')  return res.sendFile(__path + '/views/eror.html')
 
-       fetch(encodeURI(`https://raw.githubusercontent.com/VarrelKun/data/main/cecan/jepang.json`))
-        .then(response => response.json())
-        .then(data => {
-        var result = data;
-        var result = data[Math.floor(Math.random() * data.length)];
-             res.json({
-             	creator : `${creator}`,
-                 result
-             })
+       let ass = await fetchJson('https://raw.githubusercontent.com/VarrelKun/data/main/indonesia.json')
+	let random = ass[Math.floor(Math.random() * ass.length)]
+	var result = await getBuffer(random.result)
+	res.set({'Content-Type': 'image/jpg'})
+	res.send(result)
+})
          })
          .catch(e => {
          	res.json(loghandler.error)
