@@ -608,7 +608,7 @@ router.get('/nsfw/ass', async (req, res, next) => {
 	if(!apikeyInput) return res.json(loghandler.notparam)
 	if (apikeyInput != 'penTagram')  return res.sendFile(__path + '/views/eror.html')
 
-       fetch(encodeURI(`https://raw.githubusercontent.com/jepribarus/JB-Api/main/nsfw/ass.json`))
+       fetch(encodeURI(`https://raw.githubusercontent.com/VarrelKun/data/main/cecan/jepang.json`))
         .then(response => response.json())
         .then(data => {
         var result = data;
