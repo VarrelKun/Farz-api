@@ -293,7 +293,7 @@ router.get('/cewe/vietnam', async (req, res, next) => {
         var apikeyInput = req.query.apikey
 	if(!apikeyInput) return res.json(loghandler.notparam)	
 	if (apikeyInput != 'penTagram')  return res.sendFile(__path + '/views/eror.html')
-       fetch(encodeURI(`https://raw.githubusercontent.com/zeeoneofc/Asupan/main/cecan/vietnam.json`))
+       fetch(encodeURI(`https://raw.githubusercontent.com/Adiixyz/json/main/wallpapertech.json`))
         .then(response => response.json())
         .then(data => {
         var result = data;
